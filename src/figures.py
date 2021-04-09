@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from math import pi
+from itertools import *
 
 
 class Figure(ABC):
@@ -94,16 +95,9 @@ class Circle(Figure):
         return pi * self._r * self._r
 
 
-tri = Triangle(3, 4, 5)
-print(tri)
-
-rect = Rectangle(10, 2)
-print(rect)
-
-sq = Square(10)
-print(sq)
-
-cir = Circle(2)
-print(cir)
-
-print(tri.add_area(cir))
+if __name__ == "__main__":
+    tr = Triangle(1, 1, 1)
+    # rec = Rectangle(1, 2)
+    # sq = Square(1)
+    # cir = Circle(1)
+    tr.add_area(10)
